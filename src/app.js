@@ -21,7 +21,7 @@ app.use(cookieParser());
 import userRouter from "./routes/user.routes.js";
 
 app.get("/", (req, res) => {
-  res.send("sdfskdj");
+  res.send("Initial Page");
 });
 
 app.use("/api/v1/users", userRouter);

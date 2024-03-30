@@ -1,12 +1,12 @@
 //require('dotenv').config()
 import dotenv from "dotenv";
-
+dotenv.config({
+  path: "./.env",
+});
 import connectDB from "./src/db/index.js";
 import { app } from "./src/app.js";
 
-dotenv.config({
-  path: ".env",
-});
+console.log(process.env.PORT);
 
 connectDB()
   .then(() => {

@@ -6,12 +6,10 @@ dotenv.config({
 import connectDB from "./src/db/index.js";
 import { app } from "./src/app.js";
 
-console.log(process.env.PORT);
-
 connectDB()
   .then(() => {
     app.on("error", (error) => {
-      console.log("err", error);
+      console.log("Error", error);
       throw error;
     });
 

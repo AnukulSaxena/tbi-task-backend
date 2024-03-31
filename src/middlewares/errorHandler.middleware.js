@@ -5,7 +5,7 @@ export default function errorHandler(err, req, res, next) {
     statusCode = err.statusCode;
   }
 
-  console.error(err);
+  console.error("ErrorHandler: Error", err);
   res.status(statusCode).json({
     status: statusCode,
     error: err.name || "ServerError",

@@ -13,4 +13,11 @@ const userRegisterValidator = () => {
   ];
 };
 
-export { userRegisterValidator };
+const userChangePasswordValidator = () => {
+  return [
+    body("oldPassword").notEmpty().withMessage("Old password is required"),
+    body("newPassword").notEmpty().withMessage("New password is required"),
+  ];
+};
+
+export { userRegisterValidator, userChangePasswordValidator };

@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173", "https://tbi-task.netlify.app"],
   credentials: true,
   optionsSuccessStatus: 200,
 };

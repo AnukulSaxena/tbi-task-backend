@@ -1,5 +1,7 @@
+// Import necessary modules
 import { body } from "express-validator";
 
+// Define userRegisterValidator function to validate user registration data
 const userRegisterValidator = () => {
   return [
     body("email")
@@ -13,6 +15,7 @@ const userRegisterValidator = () => {
   ];
 };
 
+// Define userChangePasswordValidator function to validate password change data
 const userChangePasswordValidator = () => {
   return [
     body("oldPassword").notEmpty().withMessage("Old password is required"),
@@ -20,4 +23,5 @@ const userChangePasswordValidator = () => {
   ];
 };
 
+// Export validation functions
 export { userRegisterValidator, userChangePasswordValidator };

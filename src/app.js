@@ -8,7 +8,7 @@ const app = express();
 
 // CORS options
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://tbi-task.netlify.app", "http://localhost:4200/"],
+  origin: ["http://localhost:5173", "https://tbi-task.netlify.app", "http://localhost:4200"],
   credentials: true,
   optionsSuccessStatus: 200,
 };
